@@ -1,0 +1,6 @@
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\bin\Debug\StaxsOnStaxes.exe.config
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\bin\Debug\StaxsOnStaxes.exe
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\bin\Debug\StaxsOnStaxes.pdb
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\obj\Debug\StaxsOnStaxes.csprojResolveAssemblyReference.cache
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\obj\Debug\StaxsOnStaxes.exe
+C:\Users\eahscs\Documents\GitHub\StaxOnStaxes\StaxsOnStaxes\StaxsOnStaxes\obj\Debug\StaxsOnStaxes.pdb
