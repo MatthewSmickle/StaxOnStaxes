@@ -13,14 +13,16 @@ namespace StaxsOnStaxes
         {
 
             Console.Write("Enter and Expression: ");
-            String input = "A * B – (C + D) + E";//Console.ReadLine();
-            input.Replace(" ", "");
+            String input = "A * B - (C + D) + E";//Console.ReadLine();
+            input = input.Replace(" ", "");
             String[] arr = new String[input.Length];
             String end = "";
             for(int i = 0; i < arr.Length; i++)
             {
                 arr[i] = input.Substring(i, 1);
             }
+            bool pre;
+
             Stack stax = new Stack();
             foreach(String t in arr)
             {
@@ -32,49 +34,64 @@ namespace StaxsOnStaxes
                 {
                     while(true)
                     {
-                        if( t != ")" && stax.Count != 0)
-                        {
-                            stax.Pop();
-                            end = end + t;
-                        }
-                        else
-                        {
-                           break;
-                        }
+                      
+                        
+                            if (stax.Count != 0 || stax.Peek() == ")" )
+                            {
+                                stax.Pop();
+                                break;
+                            }
+                            else
+                            {
+                                end = end + stax.Pop();
+                            }
+                        
                         
                     }
                 }
                 else
                 {
-                    bool pre;
-                    if(t=="*" || t == "/")
+                    pre = false;
+                    if(t == "*" || t == "/")
                     {
                         pre = true;
                     }
-                    else
-                    {
-                        pre = false;
-                    }
-                    
 
-                    if(!pre && t != "(" && stax.Count != 0)
+                    while (true)
                     {
+                        if (stax.Count == 0 || stax.Peek() == "(")
+                        {
+                            break;
+                        }
+
+                        if (pre == true && (stax.Peek() == "+" || stax.Peek() == "-"))
+                        {
+                            break;
+                        }
+
+                        
+
+                       
+                        
+                        end = end + stax.Peek() ;
                         stax.Pop();
-                    }
 
+
+                    }
                     stax.Push(t);
 
-                    
 
                 }
             }
 
-            foreach(String t in stax)
+            for(int i = 0; i < stax.Count; i++)
             {
+                
+                end = end + stax.Peek();
                 stax.Pop();
-                end = end + t;
             }
-
+            end = end.Replace(')', '-');
+             
             Console.Write(end);
 
 
@@ -122,6 +139,9 @@ namespace StaxsOnStaxes
                 Console.Write(c + " ");
             }
             /*/
+
+
+            // gg boiz pack it up
         }
     }
 }
